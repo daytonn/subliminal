@@ -16,6 +16,15 @@ function sublinal_ask_to_install {
 function subliminal_install {
   subliminal_link_binary
   subliminal_download
+  if [ -d ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User ]; then
+    echo "--> Install subliminal keymap"
+    if [ -f ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Default\ \(OSX\).sublime-keymap ]; then
+      mv ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Default\ \(OSX\).sublime-keymap{,.backup}
+    fi
+    cp Default\ \(OSX\).sublime-keymap ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
+  else
+    echo "No User package!"
+  fi
 }
 
 function subliminal_download {
@@ -40,7 +49,7 @@ function subliminal_download {
             git remote add origin $git_remote
           fi
           break;;
-        No ) exit;;
+        No ) break;;
       esac
     done
   fi
@@ -51,7 +60,7 @@ function subliminal_link_binary {
     echo ""
     echo "--> Binary already linked!"
   else
-    ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+    ln -s /Applications/Sublime Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
   fi
 }
 
