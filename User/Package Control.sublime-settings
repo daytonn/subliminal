@@ -1,0 +1,25 @@
+{
+	"in_process_packages": [],
+	"installed_packages": [
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"BracketHighlighter",
+		"ColorPicker",
+		"CTags",
+		"Gist",
+		"Git",
+		"GitGutter",
+		"GitHubinator",
+		"Markdown Preview",
+		"Package Control",
+		"Pretty JSON",
+		"RegReplace",
+		"SetSyntax",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-shellcheck",
+		"SublimeREPL",
+		"Switch View in Group"
+	],
+	"submit_usage": false
+}
