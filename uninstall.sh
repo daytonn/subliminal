@@ -15,7 +15,7 @@ function sublinal_ask_to_uninstall {
 
 function subliminal_remove {
   if [ -d ~/.subliminal ]; then
-    rm -RF ~/.subliminal
+    rm -Rf ~/.subliminal
   fi
 }
 
